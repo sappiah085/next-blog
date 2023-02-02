@@ -6,8 +6,7 @@ import OutlinedInput from "@mui/material/OutlinedInput";
 import Box from "@mui/material/Box";
 import Navbar from "../navbar/navbar";
 import { secondLinks, links } from "../../pages";
-import { useLoaderData } from "react-router-dom";
-import { convert } from "../../loader";
+import { convert } from "../../index";
 import { FormControl, FormHelperText } from "@mui/material";
 import { useSnackbar } from "notistack";
 import { useDispatch, useSelector } from "react-redux";
@@ -19,7 +18,12 @@ import Prism from "prismjs";
 import { useRef } from "react";
 import Footer from "../footer/footer";
 export default function Content() {
-  const { comments, header, id, description } = useLoaderData();
+  const { comments, header, id, description } = {
+    comments: "",
+    header: "",
+    id: "",
+    description: "",
+  };
   const [value, setValue] = useState("");
   const { enqueueSnackbar } = useSnackbar();
   const containerRef = useRef();
@@ -28,7 +32,6 @@ export default function Content() {
   useEffect(() => {
     Prism.highlightAll();
     containerRef.current.scrollTo(0, 0);
-    document.title = `YorBest•${header}`;
   }, []);
   useEffect(() => {
     window.addEventListener("keypress", async (e) => {
