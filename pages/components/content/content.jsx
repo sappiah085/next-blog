@@ -12,8 +12,7 @@ import { useSnackbar } from "notistack";
 import { useDispatch, useSelector } from "react-redux";
 import { actions } from "../../redux/actiontypes/actiontypes";
 import parse from "html-react-parser";
-import "./content.css";
-import "./prism.css";
+
 import Prism from "prismjs";
 import { useRef } from "react";
 import Footer from "../footer/footer";
