@@ -1,0 +1,28 @@
+img,
+video,
+iframe {
+  height: fit-content;
+  object-fit: contain;
+  width: 100%;
+}
+
+.word p {
+  font-size: 1.1rem;
+  font-weight: 100;
+  font-family: " Gilroy-light, sans-serif";
+}
+a {
+  color: gray;
+  text-decoration: dashed;
+  font-weight: 900;
+}
+.word h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 900;
+  font-family: " Gilroy-medium, sans-serif";
+  font-size: 1.4rem;
+}
